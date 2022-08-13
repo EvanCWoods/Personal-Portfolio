@@ -1,6 +1,6 @@
-import WaveSvg from "../Reusable/WaveSvg";
-import Button from "../Reusable/Button";
-import "../../Styles/LandingPage/LandingAbout.css";
+import WaveSvg from "../../Reusable/WaveSvg";
+import Button from "../../Reusable/Button";
+import "../../../Styles/LandingPage/LandingAbout.css";
 
 export default function LandingAbout() {
   // Color variable to set the background for components throughout the component
