@@ -1,0 +1,15 @@
+.button {
+  color: white;
+  text-decoration: none;
+  padding: 0.5%;
+  border-radius: 5px;
+}
+
+.primary {
+  background: #d0194a;
+  margin-right: 1%;
+}
+
+.secondary {
+  border: 1px solid #d0194a;
+}
