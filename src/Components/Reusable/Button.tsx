@@ -4,7 +4,7 @@ import "../../Styles/Reusable/Button.css";
 
 export default function Button(props: ButtonProps) {
   return (
-    <Link className={`button ${props.buttonType}`} to={props.destination}>
+    <Link className={`button white-text ${props.buttonType}`} to={props.destination}>
       {props.text}
     </Link>
   );
