@@ -1,6 +1,7 @@
 @media (max-width: 776px) {
   .landing-page {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
   .landing-about {
     width: 100%;
