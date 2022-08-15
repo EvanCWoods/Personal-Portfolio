@@ -1,0 +1,13 @@
+@media (max-width: 776px) {
+  .landing-page {
+    display: block;
+  }
+  .landing-about {
+    width: 100%;
+  }
+  .landing-card {
+    width: 100%;
+    padding: 2%;
+    border: 1px solid#241d3e;
+  }
+}

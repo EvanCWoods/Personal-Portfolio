@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./Styles/root.css";
 import "./Styles/colors.css";
 import { LandingPage } from './Components/LandingPage/LandingPage';
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );
