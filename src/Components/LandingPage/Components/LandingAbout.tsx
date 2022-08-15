@@ -1,12 +1,13 @@
 import WaveSvg from "../../Reusable/WaveSvg";
 import Button from "../../Reusable/Button";
 import "../../../Styles/LandingPage/LandingAbout.css";
+import "../../../Styles/LandingPage/LandingPage.css";
 
 export default function LandingAbout() {
   // Color variable to set the background for components throughout the component
   const backgroundColor = "#241d3e";
   return (
-    <div>
+    <div className="landing-about">
       <div style={{ height: "20vh", background: backgroundColor}}>
         <div className="landing-info">
           <h1 className="red-text">Evan Woods</h1>

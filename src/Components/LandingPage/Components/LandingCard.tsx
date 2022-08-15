@@ -1,4 +1,6 @@
 import "../../../Styles/LandingPage/LandingCard.css";
+import "../../../Styles/LandingPage/LandingPage.css";
+
 export default function LandingCard() {
   return (
     <div className="landing-card white-background blue-text">
