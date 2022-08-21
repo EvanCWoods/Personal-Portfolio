@@ -1,7 +1,7 @@
 .side-bar {
   width: 30%;
   min-width: 230px;
-  max-width: 280px;
+  max-width: 3200px;
   height: 100vh;
   background: var(--accent-dark-blue-background);
 }
