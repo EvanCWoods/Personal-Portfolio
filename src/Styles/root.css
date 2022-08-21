@@ -1,3 +1,7 @@
+:root {
+  --grey-background: rgb(50, 45, 57);
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -2,19 +2,15 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./Styles/root.css";
 import "./Styles/colors.css";
-import { LandingPage } from './Components/LandingPage/LandingPage';
-import ProjectsPage from "./Components/ProjectsPage/ProjectsPage";
-import Footer from "./Components/Footer";
+import Landing from './Components/Landing/Landing';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App blue-background">
       <Router>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/" element={<Landing />} />
         </Routes>
-        <Footer />
       </Router>
     </div>
   );
