@@ -3,6 +3,7 @@
   --accent-dark-blue-background: rgb(25, 25, 38);
   --grey-text: rgb(138, 138, 138);
   --white-text: rgb(223, 223, 223);
+  --base-background: #191624;
 }
 
 * {
