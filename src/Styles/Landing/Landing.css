@@ -1,7 +1,11 @@
+.landing {
+  display: flex;
+}
+
 .side-bar {
   width: 30%;
-  min-width: 230px;
-  max-width: 3200px;
+  min-width: 250px;
+  max-width: 320px;
   height: 100vh;
   background: var(--accent-dark-blue-background);
 }
@@ -28,7 +32,7 @@
 
 .headshot-text {
   position: absolute;
-  top: 50%;
+  top: 60%;
   text-align: center;
 }
 
