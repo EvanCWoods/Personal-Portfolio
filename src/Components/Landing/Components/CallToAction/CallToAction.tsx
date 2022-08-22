@@ -8,6 +8,10 @@ export default function CallToAction() {
       <div className="solid-cta-background">
         <div className="cta-background">
           <div className="cta-filter">
+              <div className="cta-content">
+                  <h1>See My Amazing Projects!</h1>
+                  <button className="explore-button">EXPLORE NOW</button>
+              </div>
           </div>
         </div>
       </div>
