@@ -78,7 +78,7 @@
   justify-content: space-evenly;
 }
 .skill {
-  color: white;
+  color: var(--white-text);
   margin: 3% 0;
   width: 50%;
   text-align: center;

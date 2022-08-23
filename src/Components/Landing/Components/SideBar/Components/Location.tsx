@@ -1,3 +1,5 @@
+import {GetAgeAsNumber} from "../../../../../Utils/GetAgeAsNumber";
+
 export default function Location() {
   return (
     <div className="location">
@@ -11,7 +13,7 @@ export default function Location() {
       </div>
       <div className="age">
         <p className="location-key">Age:</p>
-        <p className="location-value">21</p>
+        <p className="location-value">{GetAgeAsNumber()}</p>
       </div>
       <div className="underline"></div>
     </div>
