@@ -1,4 +1,4 @@
-import SideBar from "./Components/SideBar";
+import SideBar from "./Components/SideBar/SideBar";
 import CallToAction from "./Components/CallToAction/CallToAction";
 
 export default function Landing () {

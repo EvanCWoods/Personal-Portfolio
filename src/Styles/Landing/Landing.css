@@ -28,6 +28,7 @@
   aspect-ratio: 1/1;
   display: flex;
   align-items: center;
+  /* border: 1px solid var(--yellow-background); */
 }
 
 .headshot-text {
@@ -69,4 +70,16 @@
 }
 .location-value {
   color: var(--grey-text);
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.skill {
+  color: var(--white-text);
+  margin: 3% 0;
+  width: 50%;
+  text-align: center;
 }
