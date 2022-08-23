@@ -28,6 +28,7 @@
   aspect-ratio: 1/1;
   display: flex;
   align-items: center;
+  /* border: 1px solid var(--yellow-background); */
 }
 
 .headshot-text {
