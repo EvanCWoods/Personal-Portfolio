@@ -1,6 +1,7 @@
 import { ToggleButton, ToggleButtonGroup } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useState } from "react";
+import Skill from "./Skill";
 
 // Create a custom theme
 const theme = createTheme({
@@ -74,9 +75,11 @@ export default function Technologies() {
           <ToggleButton value="learning">Leaning</ToggleButton>
         </ToggleButtonGroup>
       </ThemeProvider>
-      {skillsList?.map((skill) => (
-        <p>{skill}</p>
+     <div className="skills-container">
+     {skillsList?.map((skill) => (
+        <Skill skill={skill}/>
       ))}
+     </div>
     </div>
   );
 }

@@ -71,3 +71,15 @@
 .location-value {
   color: var(--grey-text);
 }
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.skill {
+  color: white;
+  margin: 3% 0;
+  width: 50%;
+  text-align: center;
+}
