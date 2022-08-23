@@ -22,3 +22,7 @@ body {
   padding: 0px;
   overflow-x: hidden;
 }
+
+button:hover {
+  cursor: pointer;
+}
