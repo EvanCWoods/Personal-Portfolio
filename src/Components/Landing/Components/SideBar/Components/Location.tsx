@@ -13,7 +13,7 @@ export default function Location() {
       </div>
       <div className="age">
         <p className="location-key">Age:</p>
-        <p className="location-value">{GetAgeAsNumber()}</p>
+        <p className="location-value">{GetAgeAsNumber(new Date("December 13, 2000"))}</p>
       </div>
       <div className="underline"></div>
     </div>
