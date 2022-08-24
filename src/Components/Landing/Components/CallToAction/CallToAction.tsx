@@ -1,5 +1,6 @@
 import Mountains from "../../../../Assets/mountain-landscape.png";
 import "../../../../Styles/Landing/CallToAction.css";
+import Work from "../Work/Work";
 
 export default function CallToAction() {
   return (
@@ -16,6 +17,7 @@ export default function CallToAction() {
               </div>
           </div>
         </div>
+      <Work />
       </div>
     </div>
   );
