@@ -3,33 +3,49 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useState } from "react";
 import Skill from "./Skill";
 
-// Create a custom theme
 const theme = createTheme({
+  status: {
+    danger: '#e53e3e',
+  },
   palette: {
+    primary: {
+      main: '#0971f1',
+      darker: '#053e85',
+    },
     neutral: {
-      main: "rgb(242, 194, 4)",
-      contrastText: "#fff",
+      main: '#64748B',
+      contrastText: '#fff',
     },
   },
 });
 
-declare module "@mui/material/styles" {
+declare module '@mui/material/styles' {
+  interface Theme {
+    status: {
+      danger: React.CSSProperties['color'];
+    };
+  }
+
   interface Palette {
-    neutral: Palette["primary"];
+    neutral: Palette['primary'];
   }
-
-  // allow configuration using `createTheme`
   interface PaletteOptions {
-    neutral?: PaletteOptions["primary"];
+    neutral: PaletteOptions['primary'];
+  }
+
+  interface PaletteColor {
+    darker?: string;
+  }
+  interface SimplePaletteColorOptions {
+    darker?: string;
+  }
+  interface ThemeOptions {
+    status: {
+      danger: React.CSSProperties['color'];
+    };
   }
 }
 
-// Update the Button's color prop options
-declare module "@mui/material/Button" {
-  interface ButtonPropsColorOverrides {
-    neutral: true;
-  }
-}
 
 // Skills list containing things that I am competent in
 const skilled = [

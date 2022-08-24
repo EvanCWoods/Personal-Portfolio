@@ -4,6 +4,7 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 interface WorkPortalProps {
   title: string;
   content: string;
+  toUrl: string;
 }
 
 export default function WorkPortal(props: WorkPortalProps) {
@@ -12,7 +13,7 @@ export default function WorkPortal(props: WorkPortalProps) {
       <h3 className="work-title">{props.title}</h3>
       <p className="work-text">{props.content}</p>
       <div className="learn-more">
-        <Link className="link-tag" to="">
+        <Link className="link-tag" to={props.toUrl}>
           Learn More
         </Link>
         <KeyboardArrowRightIcon />
