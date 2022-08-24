@@ -2,9 +2,8 @@
  * A function to get the current age of a person, using their birth date and the current date
  * @returns The persons age in years
  */
-export function GetAgeAsNumber() {
+export function GetAgeAsNumber(birthDate: Date) {
   const currentDate = new Date();
-  const birthDate = new Date("December 13, 2000");
 
   // Calculate the difference
   let diff = (currentDate.getTime() - birthDate.getTime()) / 1000;
