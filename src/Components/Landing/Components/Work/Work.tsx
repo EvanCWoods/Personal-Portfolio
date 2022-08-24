@@ -4,7 +4,7 @@ import "../../../../Styles/Landing/Work.css";
 export default function Work() {
     return (
         <div className="work">
-            <WorkPortal title="Test" content="test123"/>
+            <WorkPortal title="Web Development" content="I am a full stack dev (MERN &amp; ASP.NET) who is driven to bring businesses the power of modern technologies" />
         </div>
     );
 }
