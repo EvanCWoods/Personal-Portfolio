@@ -1,0 +1,17 @@
+.work {
+  position: absolute;
+  width: 100%;
+  top: 110%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.work-portal {
+  background: var(--grey-background);
+  min-width: 250px;
+  aspect-ratio: 1/0.9;
+  display: flex;
+  color: var(--white-text);
+  padding: 2% 1% 2% 5%;
+}
