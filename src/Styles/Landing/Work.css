@@ -9,9 +9,29 @@
 
 .work-portal {
   background: var(--grey-background);
-  min-width: 250px;
-  aspect-ratio: 1/0.9;
+  width: 270px;
+  aspect-ratio: 1/0.8;
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   color: var(--white-text);
-  padding: 2% 1% 2% 5%;
+  padding: 2% 1% 2% 3%;
+}
+.work-title {
+  margin-bottom: 10%;
+}
+.work-text {
+  color: var(--grey-text);
+  font-size: 0.85rem;
+}
+.learn-more {
+  position: absolute;
+  top: 80%;
+  display: flex;
+  align-items: center;
+  color: var(--yellow-background);
+}
+.link-tag {
+  color: var(--yellow-background);
+  text-decoration: none;
 }
