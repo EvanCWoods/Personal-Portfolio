@@ -1,5 +1,5 @@
 export default function MachineLearningProjects() {
     return (
-        <div className="ml-projects">ml</div>
+        <div className="ml-projects"></div>
     )
 }
