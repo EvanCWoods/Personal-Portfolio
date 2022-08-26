@@ -1,0 +1,5 @@
+.project {
+  width: 400px;
+  aspect-ratio: 1/1;
+  background: var(--grey-background);
+}
