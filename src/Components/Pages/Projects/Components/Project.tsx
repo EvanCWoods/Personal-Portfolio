@@ -1,21 +1,19 @@
 import "../../../../Styles/Projects/Project.css";
+import { ProjectProps } from "../../../../Models/ComponentProps";
 
-export default function Project() {
+export default function Project(props: ProjectProps) {
   return (
     <div className="project">
       <div className="image-container">
-        <img className="project-image" src={""} alt="some project" />
+        <img className="project-image" src={props.image} alt="some project" />
       </div>
-      <h1>title</h1>
+      <h1>{props.title}</h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa soluta
-        ipsam ab sequi necessitatibus cum reprehenderit optio, deleniti neque
-        temporibus veniam illo commodi similique, repudiandae voluptatum
-        pariatur modi voluptates assumenda!
+        {props.description}
       </p>
       <div className="external-link-container">
-        <a href="/">See The Site!</a>
-        <a href="/">See The Code!</a>
+        <a href={props.websiteLink}>See The Site!</a>
+        <a href={props.codeLink}>See The Code!</a>
       </div>
     </div>
   );
