@@ -1,0 +1,41 @@
+.project {
+  width: 320px;
+  background: var(--grey-background);
+  border-radius: 5px;
+  margin: 5%;
+}
+
+.project h1 {
+  color: var(--white-text);
+  padding: 0 5%;
+  font-size: 1.5rem;
+}
+
+.project p {
+  color: var(--grey-text);
+  padding: 0 5%;
+  font-size: 0.9rem;
+  margin-top: 3%;
+}
+.image-container {
+  width: 95%;
+  aspect-ratio: 1/0.8;
+  padding-left: 5%;
+  padding-top: 5%;
+}
+.project-image {
+  width: 100%;
+}
+.external-link-container {
+  margin-top: 10%;
+  padding-bottom: 5%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.external-link-container a {
+  border: 1px solid var(--yellow-background);
+  padding: 1% 2%;
+  text-decoration: none;
+  color: var(--white-text);
+}

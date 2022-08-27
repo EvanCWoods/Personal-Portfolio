@@ -4,7 +4,7 @@ import "./Styles/root.css";
 import "./Styles/colors.css";
 import Landing from './Components/Landing/Landing';
 import WebDevelopmentProjects from './Components/Pages/Projects/WebDevelopment/WebDevelopmentProjects';
-import WebThreeProjects from './Components/Pages/Projects/Web3/webThreeProjects';
+import WebThreeProjects from './Components/Pages/Projects/Web3/WebThreeProjects';
 import MachineLearningProjects from './Components/Pages/Projects/MachineLearning/MachineLearningProjects';
 
 function App() {
