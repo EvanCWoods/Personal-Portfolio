@@ -12,7 +12,7 @@ export default function Project(props: ProjectProps) {
         {props.description}
       </p>
       <div className="external-link-container">
-        <a href={props.websiteLink}>See The Site!</a>
+        {props.websiteLink ? <a href={props.websiteLink}>See The Site!</a> : null}
         <a href={props.codeLink}>See The Code!</a>
       </div>
     </div>
