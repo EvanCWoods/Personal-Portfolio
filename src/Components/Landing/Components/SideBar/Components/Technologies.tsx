@@ -80,6 +80,7 @@ export default function Technologies() {
   return (
     <div className="technologies">
       <ThemeProvider theme={theme}>
+        <div className="toggle-container">
         <ToggleButtonGroup
           color="primary"
           value={alignment}
@@ -90,6 +91,7 @@ export default function Technologies() {
           <ToggleButton value="skilled">Skilled</ToggleButton>
           <ToggleButton value="learning">Leaning</ToggleButton>
         </ToggleButtonGroup>
+        </div>
       </ThemeProvider>
      <div className="skills-container">
      {skillsList?.map((skill) => (

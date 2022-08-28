@@ -4,7 +4,7 @@
 
 .side-bar {
   width: 30%;
-  min-width: 250px;
+  min-width: 300px;
   max-width: 320px;
   height: 100vh;
   background: var(--accent-dark-blue-background);
@@ -79,7 +79,12 @@
 }
 .skill {
   color: var(--white-text);
-  margin: 3% 0;
+  margin: 3%;
   width: 50%;
   text-align: center;
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: center;
 }
