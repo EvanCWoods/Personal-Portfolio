@@ -1,24 +1,25 @@
+import { Box } from "@mui/material";
 import Mountains from "../../../../Assets/mountain-landscape.png";
 import "../../../../Styles/Landing/CallToAction.css";
 import Work from "../Work/Work";
 
 export default function CallToAction() {
   return (
-    <div className="call-to-action">
-      <img src={Mountains} alt="landscape" className="base-background"></img>
-      <div className="solid-cta-background">
-        <div className="cta-background">
-          <div className="cta-filter">
-              <div className="cta-content">
+    <Box>
+      <img src={Mountains} alt="landscape"></img>
+      <Box>
+        <Box>
+          <Box>
+              <Box>
                   <h1>See My Amazing Projects!</h1>
-                  <div className="cta-button-container">
-                    <button className="explore-button">EXPLORE NOW</button>
-                  </div>
-              </div>
-          </div>
-        </div>
+                  <Box>
+                    <button>EXPLORE NOW</button>
+                  </Box>
+              </Box>
+          </Box>
+        </Box>
       <Work />
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 }

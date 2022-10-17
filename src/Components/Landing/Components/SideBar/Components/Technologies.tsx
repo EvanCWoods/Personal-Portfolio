@@ -1,4 +1,4 @@
-import { ToggleButton, ToggleButtonGroup } from "@mui/material";
+import { Box, ToggleButton, ToggleButtonGroup } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useState } from "react";
 import Skill from "./Skill";
@@ -78,9 +78,9 @@ export default function Technologies() {
   };
 
   return (
-    <div className="technologies">
+    <Box>
       <ThemeProvider theme={theme}>
-        <div className="toggle-container">
+        <Box sx={{display: "flex", justifyContent: "center"}}>
         <ToggleButtonGroup
           color="primary"
           value={alignment}
@@ -91,13 +91,13 @@ export default function Technologies() {
           <ToggleButton value="skilled">Skilled</ToggleButton>
           <ToggleButton value="learning">Leaning</ToggleButton>
         </ToggleButtonGroup>
-        </div>
+        </Box>
       </ThemeProvider>
-     <div className="skills-container">
+     <Box sx={{display: "flex", justifyContent: "center", flexWrap: "wrap"}}>
      {skillsList?.map((skill) => (
         <Skill skill={skill}/>
       ))}
-     </div>
-    </div>
+     </Box>
+    </Box>
   );
 }
