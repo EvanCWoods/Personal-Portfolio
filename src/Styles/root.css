@@ -6,12 +6,18 @@
   --base-background: #191624;
   --yellow-background: rgb(242, 194, 4);
 }
+/* #root {
+  width: 100vw;
+  height: 100vh;
+} */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
+  width: auto;
+  height: auto;
 }
 
 body {

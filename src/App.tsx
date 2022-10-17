@@ -9,7 +9,7 @@ import MachineLearningProjects from './Components/Pages/Projects/MachineLearning
 
 function App() {
   return (
-    <div className="App blue-background">
+    <div className="blue-background">
       <Router>
         <Routes>
           <Route path="/" element={<Landing />} />

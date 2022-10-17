@@ -5,9 +5,10 @@ import Work from "../Work/Work";
 
 export default function CallToAction() {
   return (
-    <Box>
-      <img src={Mountains} alt="landscape"></img>
-      <Box>
+    <Box sx={{width: "100%", height: "100%"}}>
+      <Box sx={{width: "100%", height: "100%", backgroundImage: `url(${Mountains})`, backgroundSize: "cover"}}>
+      </Box>
+      {/* <Box>
         <Box>
           <Box>
               <Box>
@@ -19,7 +20,7 @@ export default function CallToAction() {
           </Box>
         </Box>
       <Work />
-      </Box>
+      </Box> */}
     </Box>
   );
 }
