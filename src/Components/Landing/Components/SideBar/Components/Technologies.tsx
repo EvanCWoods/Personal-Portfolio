@@ -54,10 +54,13 @@ const skilled = [
   "Node",
   "Python",
   "C# / .NET",
-  "Tensorflow",
+  "Microsoft Azure",
 ];
 // Learning list containing things that I am learning
-const learning = ["Microsoft Azure", "Solidity", "React Native"];
+const learning = [
+  "Google Cloud",
+  "Tensorflow", "Solidity", "React Native"
+];
 
 export default function Technologies() {
   const [alignment, setAlignment] = useState<string>("skilled");
@@ -67,8 +70,8 @@ export default function Technologies() {
     event: React.MouseEvent<HTMLElement>,
     newAlignment: string
   ) => {
-      // Set the alignment for the toggle button
-      // and set the skills list.
+    // Set the alignment for the toggle button
+    // and set the skills list.
     setAlignment(newAlignment);
     if (newAlignment === "skilled") {
       setSkillsList(skilled);
@@ -80,24 +83,24 @@ export default function Technologies() {
   return (
     <Box>
       <ThemeProvider theme={theme}>
-        <Box sx={{display: "flex", justifyContent: "center"}}>
-        <ToggleButtonGroup
-          color="primary"
-          value={alignment}
-          exclusive
-          onChange={handleChange}
-          aria-label="Platform"
-        >
-          <ToggleButton value="skilled">Skilled</ToggleButton>
-          <ToggleButton value="learning">Leaning</ToggleButton>
-        </ToggleButtonGroup>
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
+          <ToggleButtonGroup
+            color="primary"
+            value={alignment}
+            exclusive
+            onChange={handleChange}
+            aria-label="Platform"
+          >
+            <ToggleButton value="skilled">Skilled</ToggleButton>
+            <ToggleButton value="learning">Leaning</ToggleButton>
+          </ToggleButtonGroup>
         </Box>
       </ThemeProvider>
-     <Box sx={{display: "flex", justifyContent: "center", flexWrap: "wrap"}}>
-     {skillsList?.map((skill) => (
-        <Skill skill={skill}/>
-      ))}
-     </Box>
+      <Box sx={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
+        {skillsList?.map((skill) => (
+          <Skill skill={skill} />
+        ))}
+      </Box>
     </Box>
   );
 }
