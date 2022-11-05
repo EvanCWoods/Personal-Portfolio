@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import { Box, Paper, Typography } from "@mui/material";
 
 interface WorkPortalProps {
   title: string;
@@ -9,15 +10,16 @@ interface WorkPortalProps {
 
 export default function WorkPortal(props: WorkPortalProps) {
   return (
-    <div className="work-portal">
-      <h3 className="work-title">{props.title}</h3>
-      <p className="work-text">{props.content}</p>
-      <div className="learn-more">
-        <Link className="link-tag" to={props.toUrl}>
+    <Paper elevation={1} sx={{ width: "350px", p: "1%", color: "var(--grey-text)", borderRadius: "10px" }}>
+      <Typography variant="h5" sx={{ textAlign: "center", mb: "3%" }}>{props.title}</Typography>
+      <Typography sx={{ textAlign: "center", mb: "3%" }}>{props.content}</Typography>
+      <Box>
+        <Link className="link-tag" to={props.toUrl}
+          style={{ margin: "0 0 5% 5%" }}>
           Learn More
         </Link>
         <KeyboardArrowRightIcon />
-      </div>
-    </div>
+      </Box>
+    </Paper>
   );
 }

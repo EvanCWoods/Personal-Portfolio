@@ -11,7 +11,7 @@ export default function SideBar() {
     //   <Location />
     //   <Technologies />
     // </div>
-    <Box>
+    <Box sx={{ height: "100%" }}>
       <Headshot />
       <Location />
       <Technologies />
