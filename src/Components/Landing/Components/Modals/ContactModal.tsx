@@ -97,7 +97,7 @@ export default function ContactModal(props: {
                                         size={6}
                                     />
                                     <TextInputField
-                                        displayName="Tell us About Your Financial Goals"
+                                        displayName="Tell me about the problem you want to solve"
                                         fieldName="Message"
                                         size={12}
                                         mutliline={true}

@@ -10,7 +10,7 @@ interface WorkPortalProps {
 
 export default function WorkPortal(props: WorkPortalProps) {
   return (
-    <Paper elevation={1} sx={{ width: "350px", p: "1%", background: "var(--grey-background)", color: "var(--grey-text)", borderRadius: "10px" }}>
+    <Paper elevation={1} sx={{ width: "350px", p: "1%", background: "var(--grey-background)", color: "var(--white-text)", borderRadius: "10px" }}>
       <Typography variant="h5" sx={{ textAlign: "center", mb: "3%" }}>{props.title}</Typography>
       <Typography sx={{ textAlign: "center", mb: "3%" }}>{props.content}</Typography>
       <Box>

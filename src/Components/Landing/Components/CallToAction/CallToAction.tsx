@@ -22,6 +22,13 @@ export default function CallToAction() {
           backgroundSize: "cover",
         }}
       >
+        <Box className="blue-background-fade"
+          sx={{
+            width: "100%",
+            height: "50%",
+            position: "fixed",
+            top: 0
+          }}></Box>
         <Box
           className="blue-background"
           sx={{
@@ -43,11 +50,10 @@ export default function CallToAction() {
               left: "-10%"
             }}>
             <Box
-              className="blue-background"
+              className="blue-background-fade"
               sx={{
                 width: "100%",
                 height: "100%",
-                opacity: "0.7"
               }}>
               <Typography variant="h4" sx={{ color: "var(--white-text)" }}>Inquire To See What I Can Do For You</Typography>
               <button style={{ padding: "1% 2%", border: "none", background: "var(--yellow-background)", borderRadius: "10px" }} onClick={handleOpenModal}>ENQUIRE</button>
