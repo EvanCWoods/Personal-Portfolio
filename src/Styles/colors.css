@@ -2,6 +2,9 @@
   background: #191624;
 }
 
+.blue-background-fade-light {
+  background: rgba(25, 22, 36, 0.5);
+}
 .blue-background-fade {
   background: rgba(25, 22, 36, 0.75);
 }
