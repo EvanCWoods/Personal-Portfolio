@@ -95,6 +95,29 @@ app.post("/login", async (req, res) => {
     }
 });
 
+app.post("/create-post", async (req, res) => {
+    try {
+        const post = {
+            title: req.body.title,
+            subtitle: req.body.subtitle,
+            body: req.body.body
+        }
+        await containers.Posts.items.create(post);
+        res.status(200).json("Success")
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+app.get("/posts", async (req, res) => {
+    try {
+        const sqlQuery = `SELECT * FROM c`;
+        const data = await containers.Posts.items.query(sqlQuery).fetchAll();
+        res.status(200).json(data.resources);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 app.listen(PORT, () => {
     console.log(`Running on port: ${PORT}!`);
 });
