@@ -9,6 +9,7 @@ import MachineLearningProjects from './Components/Pages/Projects/MachineLearning
 import Login from "./Components/Login/Login";
 import ProtectedRoute from './Components/ProtectedRoutes';
 import CreateBlog from './Components/CreateBlog/CreateBlog';
+import Blog from './Components/Blog/Blog';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/projects/web-development" element={<WebDevelopmentProjects />} />
           <Route path="/projects/web-3" element={<WebThreeProjects />} />
           <Route path="/projects/machine-learning" element={<MachineLearningProjects />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/login" element={<Login />} />
           <Route path="/create" element={
             <ProtectedRoute>
