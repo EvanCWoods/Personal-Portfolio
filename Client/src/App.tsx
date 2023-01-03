@@ -10,6 +10,7 @@ import Login from "./Components/Login/Login";
 import ProtectedRoute from './Components/ProtectedRoutes';
 import CreateBlog from './Components/CreateBlog/CreateBlog';
 import Blog from './Components/Blog/Blog';
+import Post from './Components/Blog/Post';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/projects/machine-learning" element={<MachineLearningProjects />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/login" element={<Login />} />
+          <Route path="//blog/:id" element={<Post />} />
           <Route path="/create" element={
             <ProtectedRoute>
               <CreateBlog />

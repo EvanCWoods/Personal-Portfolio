@@ -100,7 +100,10 @@ app.post("/create-post", async (req, res) => {
         const post = {
             title: req.body.title,
             subtitle: req.body.subtitle,
-            body: req.body.body
+            body: req.body.body,
+            thumbnail: req.body.thumbnail,
+            thumbnailAlt: req.body.thumbnailAlt,
+            createdAt: new Date()
         }
         await containers.Posts.items.create(post);
         res.status(200).json("Success")
@@ -113,6 +116,15 @@ app.get("/posts", async (req, res) => {
         const sqlQuery = `SELECT * FROM c`;
         const data = await containers.Posts.items.query(sqlQuery).fetchAll();
         res.status(200).json(data.resources);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+app.post("/get-post", async (req, res) => {
+    try {
+        const sqlQuery = `SELECT * FROM c WHERE c.id = '${req.body.postId}'`;
+        const data = await containers.Posts.items.query(sqlQuery).fetchAll();
+        res.status(200).json(data.resources[0]);
     } catch (err) {
         res.status(500).json(err);
     }
