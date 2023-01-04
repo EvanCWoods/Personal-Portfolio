@@ -7,6 +7,7 @@ import TextInputField from "../Landing/Components/Work/Components/TextInputField
 
 const Blog = () => {
     const [posts, setPosts] = useState<any[]>();
+    const [isPosts, setIsPosts] = useState<boolean>(true);
 
     const getPosts = async () => {
         const response = await fetch("/posts", {
@@ -19,6 +20,11 @@ const Blog = () => {
     useEffect(() => {
         getPosts();
     }, []);
+    useEffect(() => {
+        if (posts) {
+            posts!.length >= 1 ? setIsPosts(true) : setIsPosts(false);
+        }
+    }, [posts]);
 
     const handleChange = async (e: any) => {
         const filter = e.target.value;
@@ -62,8 +68,13 @@ const Blog = () => {
                         </Box>
                     ))}
                 </Box>
-                : <Typography>Check back again later!</Typography>
+                : null
             }
+            {isPosts
+                ? null
+                : <Box sx={{ display: "flex", justifyContent: "center", pt: "10%" }}>
+                    <Typography variant="h4" sx={{ color: "white" }}>Hmmm... It looks like I haven't gotten to learning that yet. <br></br><br></br> Try something else, like 'Cosmos'</Typography>
+                </Box>}
         </Box>
     )
 }
