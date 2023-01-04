@@ -121,6 +121,25 @@ app.get("/posts", async (req, res) => {
         res.status(500).json(err);
     }
 });
+app.post("/posts", async (req, res) => {
+    function onlyUnique(value, index, self) {
+        return self.indexOf(value) === index;
+      }
+
+    try {
+        const filteredResponse =  [];
+        const sqlQuery = `SELECT * FROM c`;
+        const data = await containers.Posts.items.query(sqlQuery).fetchAll();
+        data.resources.filter((post) => post.tags.find(tag => {
+            if (tag.includes(req.body.filter)) {
+                filteredResponse.push(post);
+            }
+        }));
+        res.status(200).json(filteredResponse.filter(onlyUnique));
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
 app.post("/get-post", async (req, res) => {
     try {
         const sqlQuery = `SELECT * FROM c WHERE c.id = '${req.body.postId}'`;

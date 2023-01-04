@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import { Typography } from "@mui/material";
+import { TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import React, { useState, useEffect } from "react";
+import TextInputField from "../Landing/Components/Work/Components/TextInputField";
 
 const Blog = () => {
     const [posts, setPosts] = useState<any[]>();
@@ -19,9 +20,29 @@ const Blog = () => {
         getPosts();
     }, []);
 
+    const handleChange = async (e: any) => {
+        const filter = e.target.value;
+        // request to api to get posts that have matching tags
+        const response = await fetch("/posts", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify({ filter: filter })
+        })
+        const data = await response.json();
+        console.log(data);
+        //update posts state to be filtered posts
+        // setPosts(data);
+    }
+
 
     return (
         <Box sx={{ height: "100vh" }}>
+            <TextField
+                className="search-for-blogs"
+                label="Search For Blogs"
+                sx={{ width: "30%" }}
+                onChange={handleChange}
+            />
             {posts
                 ? <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "space-evenly" }}>
                     {posts!.map(post => (
