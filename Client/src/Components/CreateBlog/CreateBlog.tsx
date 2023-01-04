@@ -9,6 +9,7 @@ const CreateBlog = () => {
         const body = (((document.querySelector(".blog-body-input") as HTMLElement).childNodes[1] as HTMLInputElement).childNodes[0] as HTMLInputElement).value
         const thumbnail = (((document.querySelector(".blog-thumbnail-input") as HTMLElement).childNodes[1] as HTMLInputElement).childNodes[0] as HTMLInputElement).value
         const thumbnailAlt = (((document.querySelector(".blog-thumbnailAlt-input") as HTMLElement).childNodes[1] as HTMLInputElement).childNodes[0] as HTMLInputElement).value
+        const tags = (((document.querySelector(".blog-tags-input") as HTMLElement).childNodes[1] as HTMLInputElement).childNodes[0] as HTMLInputElement).value
 
 
         const obj = {
@@ -16,7 +17,8 @@ const CreateBlog = () => {
             subtitle: subtitle,
             body: body,
             thumbnail: thumbnail,
-            thubmnailAlt: thumbnailAlt
+            thubmnailAlt: thumbnailAlt,
+            tags: tags
         }
 
         const response = await fetch("/create-post", {
@@ -47,6 +49,11 @@ const CreateBlog = () => {
                     label="Thumbnail Alt"
                 />
             </Box>
+            <TextField
+                className="blog-tags-input"
+                label="Tags"
+                sx={{ width: "50%" }}
+            />
             <Box sx={{ width: "100%", display: "flex", justifyContent: "center" }}>
                 <TextField
                     className="blog-body-input"

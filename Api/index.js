@@ -103,7 +103,8 @@ app.post("/create-post", async (req, res) => {
             body: req.body.body,
             thumbnail: req.body.thumbnail,
             thumbnailAlt: req.body.thumbnailAlt,
-            createdAt: new Date()
+            createdAt: new Date(),
+            tags: req.body.tags.split("/")
         }
         await containers.Posts.items.create(post);
         res.status(200).json("Success")
@@ -116,6 +117,25 @@ app.get("/posts", async (req, res) => {
         const sqlQuery = `SELECT * FROM c`;
         const data = await containers.Posts.items.query(sqlQuery).fetchAll();
         res.status(200).json(data.resources);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+app.post("/posts", async (req, res) => {
+    function onlyUnique(value, index, self) {
+        return self.indexOf(value) === index;
+      }
+
+    try {
+        const filteredResponse =  [];
+        const sqlQuery = `SELECT * FROM c`;
+        const data = await containers.Posts.items.query(sqlQuery).fetchAll();
+        data.resources.filter((post) => post.tags.find(tag => {
+            if (tag.includes(req.body.filter)) {
+                filteredResponse.push(post);
+            }
+        }));
+        res.status(200).json(filteredResponse.filter(onlyUnique));
     } catch (err) {
         res.status(500).json(err);
     }
