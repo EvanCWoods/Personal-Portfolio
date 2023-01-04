@@ -31,7 +31,7 @@ const Blog = () => {
         const data = await response.json();
         console.log(data);
         //update posts state to be filtered posts
-        // setPosts(data);
+        setPosts(data);
     }
 
 
@@ -40,11 +40,11 @@ const Blog = () => {
             <TextField
                 className="search-for-blogs"
                 label="Search For Blogs"
-                sx={{ width: "30%" }}
+                sx={{ width: "400px", position: "fixed", left: "calc(100% - 400px)", border: "none" }}
                 onChange={handleChange}
             />
             {posts
-                ? <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "space-evenly" }}>
+                ? <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "space-evenly", py: "7%" }}>
                     {posts!.map(post => (
                         <Box sx={{ width: "350px", height: "400px", background: "var(--grey-background)", color: "var(--white-text)", borderRadius: "10px", m: 3 }}>
                             <Box sx={{ height: "90%" }}>
