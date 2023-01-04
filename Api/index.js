@@ -103,7 +103,8 @@ app.post("/create-post", async (req, res) => {
             body: req.body.body,
             thumbnail: req.body.thumbnail,
             thumbnailAlt: req.body.thumbnailAlt,
-            createdAt: new Date()
+            createdAt: new Date(),
+            tags: req.body.tags.split("/")
         }
         await containers.Posts.items.create(post);
         res.status(200).json("Success")
