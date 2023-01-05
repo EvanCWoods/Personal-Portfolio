@@ -25,8 +25,8 @@ export default function CallToAction() {
         <Box className="blue-background-fade"
           sx={{
             width: "100%",
-            height: "50%",
-            position: "fixed",
+            height: "100%",
+            position: "relative",
             top: 0
           }}></Box>
         <Box
@@ -35,7 +35,7 @@ export default function CallToAction() {
             width: "80%",
             height: "90%",
             position: "relative",
-            top: "10%",
+            top: "-90%",
             mx: "10%"
           }}>
 
