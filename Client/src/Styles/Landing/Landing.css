@@ -88,3 +88,18 @@
   display: flex;
   justify-content: center;
 }
+
+@media (max-width: 650px) {
+  .tech-large {
+    display: none
+  }
+  .tech-small {
+    display: flex;
+  }
+}
+
+@media (min-width: 650px) {
+  .tech-small {
+    display: none;
+  }
+}

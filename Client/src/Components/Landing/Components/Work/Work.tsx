@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 
 export default function Work() {
   return (
-    <Box sx={{ display: "flex", justifyContent: "space-evenly" }}>
+    <Box className="mobile-work" sx={{ display: "flex", justifyContent: "space-evenly", flexWrap: "wrap" }}>
       <WorkPortal
         title="Web Development"
         content="I am a full stack dev (MERN &amp; ASP.NET) who is driven to bring businesses the power of modern technologies!"

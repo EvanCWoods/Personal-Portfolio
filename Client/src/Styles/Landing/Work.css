@@ -36,3 +36,9 @@
   color: var(--yellow-background);
   text-decoration: none;
 }
+
+@media (max-width: 650px) {
+  .mobile-work {
+    margin-top: 15%;
+  }
+}
