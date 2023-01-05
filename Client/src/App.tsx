@@ -15,7 +15,7 @@ import { Box } from '@mui/material';
 
 function App() {
   return (
-    <Box className="blue-background" sx={{ height: "100vh" }}>
+    <Box className="blue-background">
       <Router>
         <Routes>
           <Route path="/" element={<Landing />} />

@@ -22,7 +22,7 @@ const Post = () => {
     }, []);
 
     return (
-        <Box sx={{ height: "100vh" }}>
+        <Box sx={{}}>
             {post
                 ? <Box sx={{ width: "80%", mx: "10%", display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
                     <Box sx={{ background: "var(--grey-background)", color: "var(--white-text)", pb: "70px" }}>

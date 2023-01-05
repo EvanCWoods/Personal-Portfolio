@@ -29,7 +29,7 @@ const CreateBlog = () => {
         const data = await response;
     }
     return (
-        <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center", height: "100vh" }}>
+        <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center", }}>
             <Typography variant="h4">Create A New Post</Typography>
             <Box sx={{ width: "100%", display: "flex", justifyContent: "center" }}>
                 <TextField

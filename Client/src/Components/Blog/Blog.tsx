@@ -42,7 +42,7 @@ const Blog = () => {
 
 
     return (
-        <Box sx={{ height: "100vh" }}>
+        <Box sx={{}}>
             <TextField
                 className="search-for-blogs"
                 label="Search For Blogs"
