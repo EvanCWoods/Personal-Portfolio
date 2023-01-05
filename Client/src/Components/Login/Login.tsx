@@ -18,7 +18,7 @@ const Login = () => {
         localStorage.setItem("credentials", data.token);
     }
     return (
-        <Box sx={{ height: "100vh", display: "flex", justifyContent: "center" }}>
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Box>
                 <input className="inpOne"></input>
                 <input className="inpTwo"></input>
