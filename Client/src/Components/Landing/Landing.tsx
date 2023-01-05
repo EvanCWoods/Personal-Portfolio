@@ -4,7 +4,7 @@ import { Grid, Box } from "@mui/material";
 
 export default function Landing() {
   return (
-    <Box sx={{ height: "100vh" }}>
+    <Box>
       <Grid container>
         <Grid item xs={0} md={3} lg={2}>
           <SideBar />

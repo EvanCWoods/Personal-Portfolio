@@ -56,14 +56,14 @@ export default function CallToAction() {
                 height: "100%",
               }}>
               <Box sx={{ p: "5%" }}>
-                <Typography variant="h4" sx={{ color: "var(--white-text)" }}>Inquire To See What I Can Do For You</Typography>
-                <button style={{ padding: "1% 2%", border: "none", background: "var(--yellow-background)", borderRadius: "10px", marginTop: "100px" }} onClick={handleOpenModal}>ENQUIRE</button>
+                <Typography variant="h4" sx={{ color: "var(--white-text)" }}>Whether It's Cloud, Coding, <br></br>or Technical Consulting, <br></br> I Can Help!</Typography>
+                <button style={{ padding: "1% 2%", border: "none", background: "var(--yellow-background)", borderRadius: "10px", marginTop: "100px" }} onClick={handleOpenModal}>INQUIRE</button>
               </Box>
             </Box>
           </Box>
         </Box>
       </Box>
-      <Box className="blue-background" sx={{ paddingTop: "10%" }}>
+      <Box className="blue-background" sx={{ py: "10%" }}>
         <Work />
       </Box>
       <ContactModal open={open} setOpen={setOpen} />

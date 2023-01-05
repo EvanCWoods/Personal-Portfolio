@@ -11,10 +11,11 @@ import ProtectedRoute from './Components/ProtectedRoutes';
 import CreateBlog from './Components/CreateBlog/CreateBlog';
 import Blog from './Components/Blog/Blog';
 import Post from './Components/Blog/Post';
+import { Box } from '@mui/material';
 
 function App() {
   return (
-    <div className="blue-background">
+    <Box className="blue-background" sx={{ height: "100vh" }}>
       <Router>
         <Routes>
           <Route path="/" element={<Landing />} />
@@ -32,7 +33,7 @@ function App() {
           />
         </Routes>
       </Router>
-    </div>
+    </Box>
   );
 }
 
