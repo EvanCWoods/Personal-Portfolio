@@ -1,4 +1,4 @@
-import { Box, ToggleButton, ToggleButtonGroup } from "@mui/material";
+import { Box, Grid, ToggleButton, ToggleButtonGroup, Typography } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useState } from "react";
 import Skill from "./Skill";
@@ -82,24 +82,50 @@ export default function Technologies() {
 
   return (
     <Box>
-      <ThemeProvider theme={theme}>
-        <Box sx={{ display: "flex", justifyContent: "center" }}>
-          <ToggleButtonGroup
-            color="primary"
-            value={alignment}
-            exclusive
-            onChange={handleChange}
-            aria-label="Platform"
-          >
-            <ToggleButton value="skilled">Skilled</ToggleButton>
-            <ToggleButton value="learning">Leaning</ToggleButton>
-          </ToggleButtonGroup>
+      <Box className="tech-large" sx={{ pb: "10%" }}>
+        <ThemeProvider theme={theme}>
+          <Box sx={{ display: "flex", justifyContent: "center" }}>
+            <ToggleButtonGroup
+              color="primary"
+              value={alignment}
+              exclusive
+              onChange={handleChange}
+              aria-label="Platform"
+            >
+              <ToggleButton value="skilled">Skilled</ToggleButton>
+              <ToggleButton value="learning">Leaning</ToggleButton>
+            </ToggleButtonGroup>
+          </Box>
+        </ThemeProvider>
+        <Box sx={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
+          {skillsList?.map((skill) => (
+            <Skill skill={skill} />
+          ))}
         </Box>
-      </ThemeProvider>
-      <Box sx={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
-        {skillsList?.map((skill) => (
-          <Skill skill={skill} />
-        ))}
+      </Box>
+      <Box className="tech-small" sx={{ pb: "10%" }}>
+        <Grid container>
+          <Grid item xs={6}>
+            <Box sx={{ display: "flex", justifyContent: "center", color: "var(--white-text)", pb: "7%" }}>
+              <Typography variant="h6">What I  Know</Typography>
+            </Box>
+            <Box sx={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
+              {skilled?.map((skill) => (
+                <Skill skill={skill} />
+              ))}
+            </Box>
+          </Grid>
+          <Grid item xs={6}>
+            <Box sx={{ display: "flex", justifyContent: "center", color: "var(--white-text)", pb: "7%" }}>
+              <Typography variant="h6">What I'm Learning</Typography>
+            </Box>
+            <Box sx={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
+              {learning?.map((skill) => (
+                <Skill skill={skill} />
+              ))}
+            </Box>
+          </Grid>
+        </Grid>
       </Box>
     </Box>
   );
