@@ -90,7 +90,7 @@ const CreateBlog = () => {
                 <Box sx={{ width: "80%", mx: "10%", display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
                     <Box sx={{ background: "var(--grey-background)", color: "var(--white-text)", pb: "70px" }}>
                         <img src={thumbnail} alt={thumbnailAlt} style={{ width: "90%", margin: "5%", maxWidth: "900px", maxHeight: "500px" }} />
-                        <Box sx={{ margin: "0 5%" }}>
+                        <Box sx={{ margin: "0 5%", maxWidth: "900px" }}>
                             <Typography variant="h4">{title}</Typography>
                             <Typography variant="subtitle1">{subtitle}</Typography>
                             <br></br>
@@ -99,7 +99,7 @@ const CreateBlog = () => {
                     </Box>
                 </Box>
             </Box>
-        </Box>
+        </Box >
     )
 }
 

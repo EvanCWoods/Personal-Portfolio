@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React, { useState } from "react";
 import { useEffect } from "react";
+var parse = require('html-react-parser');
 
 const Post = () => {
     const [post, setPost] = useState<any>();
@@ -27,11 +28,11 @@ const Post = () => {
                 ? <Box sx={{ width: "80%", mx: "10%", display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
                     <Box sx={{ background: "var(--grey-background)", color: "var(--white-text)", pb: "70px" }}>
                         <img src={post.thumbnail} alt={post.thumbnailAlt} style={{ width: "90%", margin: "5%", maxWidth: "900px", maxHeight: "500px" }} />
-                        <Box sx={{ margin: "0 5%" }}>
+                        <Box sx={{ margin: "0 5%", maxWidth: "900px" }}>
                             <Typography variant="h4">{post!.title}</Typography>
                             <Typography variant="subtitle1">{post!.subtitle}</Typography>
                             <br></br>
-                            <Box dangerouslySetInnerHTML={{ __html: post!.body }} />
+                            <Box>{parse(post!.body)}</Box>
                         </Box>
                     </Box>
                 </Box>
