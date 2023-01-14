@@ -31,7 +31,7 @@ const Post = () => {
                             <Typography variant="h4">{post!.title}</Typography>
                             <Typography variant="subtitle1">{post!.subtitle}</Typography>
                             <br></br>
-                            <Typography variant="body1">{post!.body}</Typography>
+                            <Box dangerouslySetInnerHTML={{ __html: post!.body }} />
                         </Box>
                     </Box>
                 </Box>

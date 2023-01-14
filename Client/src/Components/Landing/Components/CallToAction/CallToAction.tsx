@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import Mountains from "../../../../Assets/mountain-landscape.png";
 // import MyImage from "../../../../Assets/MyImage.PNG";
 import "../../../../Styles/Landing/CallToAction.css";
@@ -57,13 +57,15 @@ export default function CallToAction() {
                 height: "100%",
                 display: "flex"
               }}>
-              <Box sx={{ p: "5%", width: "50%" }}>
-                <Typography variant="h4" sx={{ color: "var(--white-text)" }}>Whether It's Cloud, Coding, <br></br>or Technical Consulting, <br></br> I Can Help!</Typography>
-                <button style={{ padding: "2% 4%", border: "none", background: "var(--yellow-background)", borderRadius: "10px", marginTop: "100px", fontSize: "1rem" }} onClick={handleOpenModal}>INQUIRE</button>
-              </Box>
-              {/* <Box sx={{ width: "50%" }}>
+              <Grid container>
+                <Grid item xs={12} md={6} sx={{ p: "5%" }}>
+                  <Typography variant="h4" sx={{ color: "var(--white-text)" }}>Whether It's Cloud, Coding, or Technical Consulting, I Can Help!</Typography>
+                  <button style={{ padding: "2% 4%", border: "none", background: "var(--yellow-background)", borderRadius: "10px", marginTop: "100px", fontSize: "1rem" }} onClick={handleOpenModal}>INQUIRE</button>
+                </Grid>
+                {/* <Box sx={{ width: "50%" }}>
                 <img src={MyImage} alt="headshot" style={{ width: "50%", transform: "scaleX(-1)" }} />
               </Box> */}
+              </Grid>
             </Box>
           </Box>
         </Box>
