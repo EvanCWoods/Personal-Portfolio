@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import Mountains from "../../../../Assets/mountain-landscape.png";
+// import MyImage from "../../../../Assets/MyImage.PNG";
 import "../../../../Styles/Landing/CallToAction.css";
 import Work from "../Work/Work";
 import ContactModal from "../Modals/ContactModal";
@@ -54,16 +55,20 @@ export default function CallToAction() {
               sx={{
                 width: "100%",
                 height: "100%",
+                display: "flex"
               }}>
-              <Box sx={{ p: "5%" }}>
+              <Box sx={{ p: "5%", width: "50%" }}>
                 <Typography variant="h4" sx={{ color: "var(--white-text)" }}>Whether It's Cloud, Coding, <br></br>or Technical Consulting, <br></br> I Can Help!</Typography>
-                <button style={{ padding: "1% 2%", border: "none", background: "var(--yellow-background)", borderRadius: "10px", marginTop: "100px" }} onClick={handleOpenModal}>INQUIRE</button>
+                <button style={{ padding: "2% 4%", border: "none", background: "var(--yellow-background)", borderRadius: "10px", marginTop: "100px", fontSize: "1rem" }} onClick={handleOpenModal}>INQUIRE</button>
               </Box>
+              {/* <Box sx={{ width: "50%" }}>
+                <img src={MyImage} alt="headshot" style={{ width: "50%", transform: "scaleX(-1)" }} />
+              </Box> */}
             </Box>
           </Box>
         </Box>
       </Box>
-      <Box className="blue-background" sx={{ py: "10%" }}>
+      <Box className="blue-background" sx={{ py: "5%" }}>
         <Work />
       </Box>
       <ContactModal open={open} setOpen={setOpen} />
