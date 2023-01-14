@@ -5,6 +5,7 @@ const bcrypt = require("bcrypt");
 const dotenv = require("dotenv");
 const jwt = require('jsonwebtoken');
 const { CosmosClient } = require("@azure/cosmos");
+const nodemailer = require("nodemailer");
 
 dotenv.config();
 const PORT = process.env.PORT || 3001;
@@ -75,6 +76,34 @@ const matchPassword = async function (userPassword, dbPassword) {
     return await bcrypt.compare(userPassword, dbPassword);
 };
 
+
+app.post("/inquire", async (req, res) => {
+    const transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+          user: process.env.email,
+          pass: process.env.password,
+        },
+      });
+    
+    
+      const mailOptions = {
+        from: "evan.woods.dev@gmail.com",
+        to: "evan.woods.dev@gmail.com",
+        subject: `Enquiry from ${req.body.FirstName} ${req.body.LastName}`,
+        text: `${req.body.Message} \n\n Phone: ${req.body.Phone}`,
+      };
+    
+    
+      const response = await transporter.sendMail(mailOptions, (err, info) => {
+        if (err) {
+          res.send(err);
+        } else {
+          console.log(`Email sent! ${info.response}`);
+          res.send("Success");
+        }
+      });
+});
 
 app.post("/login", async (req, res) => {
     try {

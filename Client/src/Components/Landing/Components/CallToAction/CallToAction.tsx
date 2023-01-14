@@ -1,6 +1,5 @@
 import { Box, Grid, Typography } from "@mui/material";
 import Mountains from "../../../../Assets/mountain-landscape.png";
-// import MyImage from "../../../../Assets/MyImage.PNG";
 import "../../../../Styles/Landing/CallToAction.css";
 import Work from "../Work/Work";
 import ContactModal from "../Modals/ContactModal";
@@ -58,13 +57,10 @@ export default function CallToAction() {
                 display: "flex"
               }}>
               <Grid container>
-                <Grid item xs={12} md={6} sx={{ p: "5%" }}>
+                <Grid item xs={12} md={8} sx={{ p: "5%" }}>
                   <Typography variant="h4" sx={{ color: "var(--white-text)" }}>Whether It's Cloud, Coding, or Technical Consulting, I Can Help!</Typography>
                   <button style={{ padding: "2% 4%", border: "none", background: "var(--yellow-background)", borderRadius: "10px", marginTop: "100px", fontSize: "1rem" }} onClick={handleOpenModal}>INQUIRE</button>
                 </Grid>
-                {/* <Box sx={{ width: "50%" }}>
-                <img src={MyImage} alt="headshot" style={{ width: "50%", transform: "scaleX(-1)" }} />
-              </Box> */}
               </Grid>
             </Box>
           </Box>

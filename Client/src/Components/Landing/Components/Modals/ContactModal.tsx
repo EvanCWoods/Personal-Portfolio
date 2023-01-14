@@ -27,7 +27,7 @@ const validationSchema = Yup.object().shape({
 });
 
 const handleSubmit = async (values: any) => {
-    const response = await fetch("/", {
+    const response = await fetch("/inquire", {
         method: "POST",
         mode: "cors",
         headers: {
