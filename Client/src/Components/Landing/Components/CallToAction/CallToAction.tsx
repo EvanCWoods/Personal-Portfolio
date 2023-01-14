@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import Mountains from "../../../../Assets/mountain-landscape.png";
 import "../../../../Styles/Landing/CallToAction.css";
 import Work from "../Work/Work";
@@ -54,16 +54,19 @@ export default function CallToAction() {
               sx={{
                 width: "100%",
                 height: "100%",
+                display: "flex"
               }}>
-              <Box sx={{ p: "5%" }}>
-                <Typography variant="h4" sx={{ color: "var(--white-text)" }}>Whether It's Cloud, Coding, <br></br>or Technical Consulting, <br></br> I Can Help!</Typography>
-                <button style={{ padding: "1% 2%", border: "none", background: "var(--yellow-background)", borderRadius: "10px", marginTop: "100px" }} onClick={handleOpenModal}>INQUIRE</button>
-              </Box>
+              <Grid container>
+                <Grid item xs={12} md={8} sx={{ p: "5%" }}>
+                  <Typography variant="h4" sx={{ color: "var(--white-text)" }}>Whether It's Cloud, Coding, or Technical Consulting, I Can Help!</Typography>
+                  <button style={{ padding: "2% 4%", border: "none", background: "var(--yellow-background)", borderRadius: "10px", marginTop: "100px", fontSize: "1rem" }} onClick={handleOpenModal}>INQUIRE</button>
+                </Grid>
+              </Grid>
             </Box>
           </Box>
         </Box>
       </Box>
-      <Box className="blue-background" sx={{ py: "10%" }}>
+      <Box className="blue-background" sx={{ py: "5%" }}>
         <Work />
       </Box>
       <ContactModal open={open} setOpen={setOpen} />

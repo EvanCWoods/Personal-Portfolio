@@ -3,18 +3,19 @@ import { Formik, Form } from "formik";
 import { useState } from "react";
 import * as Yup from "yup";
 import TextInputField from "./Contact/Components/TextInputField";
+import CloseIcon from '@mui/icons-material/Close';
 
 
 const style = {
     position: "absolute",
-    top: "50%",
+    top: "20%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    width: 400,
+    width: 800,
     height: 100,
     bgcolor: "background.paper",
     boxShadow: 24,
-    borderRadius: "20px",
+    borderRadius: "30px",
 };
 
 const validationSchema = Yup.object().shape({
@@ -26,7 +27,7 @@ const validationSchema = Yup.object().shape({
 });
 
 const handleSubmit = async (values: any) => {
-    const response = await fetch("/", {
+    const response = await fetch("/inquire", {
         method: "POST",
         mode: "cors",
         headers: {
@@ -49,7 +50,7 @@ export default function ContactModal(props: {
     }
 
     return (
-        <Modal open={props.open} onClose={handleClose}>
+        <Modal open={props.open} onClose={handleClose} sx={{ pt: "5%" }} >
             <Formik
                 initialValues={{
                     FirstName: "",
@@ -64,15 +65,20 @@ export default function ContactModal(props: {
                     props.setOpen(true);
                 }}
             >
-                <Form>
+                <Form >
                     <Grid container sx={{ mb: "100px" }}>
                         <Grid item xs={1} md={3}></Grid>
                         <Grid item xs={10} md={6}>
-                            <Paper elevation={2} sx={{ pb: "30px" }} id="contact-form">
+                            <Paper elevation={2} sx={{ pb: "30px", background: "var(--accent-dark-blue-background)", color: "var(--white-text)" }} id="contact-form">
                                 <Grid container spacing={1} sx={{ px: "5%" }}>
-                                    <Typography variant="h4" sx={{ mt: "2%", width: "100%" }}>
-                                        Contact Us
-                                    </Typography>
+                                    <Box sx={{ width: "100%", display: "flex", alignItems: "center" }}>
+                                        <Typography variant="h4" sx={{ mt: "2%", width: "90%", }}>
+                                            Contact Me
+                                        </Typography>
+                                        <Box sx={{ width: "10%", color: "var(--yellow-background)", display: "flex", justifyContent: "center", alignItems: "center" }}>
+                                            <CloseIcon onClick={handleClose} />
+                                        </Box>
+                                    </Box>
                                     <TextInputField
                                         displayName="First Name"
                                         fieldName="FirstName"
@@ -110,12 +116,7 @@ export default function ContactModal(props: {
                                         xs={2}
                                         sx={{ display: "flex", justifyContent: "center", mt: "15px" }}
                                     >
-                                        <Button
-                                            variant="contained"
-                                            type="submit"
-                                        >
-                                            Send
-                                        </Button>
+                                        <button style={{ background: "var(--yellow-background)", border: "none", padding: "6% 10%", fontSize: "1rem", borderRadius: "7px" }}>Send</button>
                                     </Grid>
                                 </Grid>
                             </Paper>

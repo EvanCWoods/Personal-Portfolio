@@ -1,7 +1,13 @@
 import { Box, Grid, ToggleButton, ToggleButtonGroup, Typography } from "@mui/material";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
 import { useState } from "react";
 import Skill from "./Skill";
+
+const ToggleButtonStyled = styled(ToggleButton)({
+  "&.Mui-selected, &.Mui-selected:hover": {
+    color: 'var(--yellow-background)'
+  }
+});
 
 const theme = createTheme({
   status: {
@@ -86,14 +92,14 @@ export default function Technologies() {
         <ThemeProvider theme={theme}>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <ToggleButtonGroup
-              color="primary"
               value={alignment}
               exclusive
               onChange={handleChange}
               aria-label="Platform"
+              sx={{ background: "var(--grey-background)" }}
             >
-              <ToggleButton value="skilled">Skilled</ToggleButton>
-              <ToggleButton value="learning">Leaning</ToggleButton>
+              <ToggleButtonStyled value="skilled">Skilled</ToggleButtonStyled>
+              <ToggleButtonStyled value="learning">Learning</ToggleButtonStyled>
             </ToggleButtonGroup>
           </Box>
         </ThemeProvider>
