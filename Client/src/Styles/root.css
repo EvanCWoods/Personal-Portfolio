@@ -30,3 +30,6 @@ button:hover {
 .MuiOutlinedInput-root {
   background-color: white;
 }
+.modal-close:hover {
+  cursor: pointer;
+}

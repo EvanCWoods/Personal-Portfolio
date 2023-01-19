@@ -6,7 +6,7 @@ export default function Landing() {
   return (
     <Box>
       <Grid container>
-        <Grid item xs={0} md={3} lg={2}>
+        <Grid item xs={12} md={3} lg={2}>
           <SideBar />
         </Grid>
         <Grid item xs={12} md={9} lg={10}>

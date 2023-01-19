@@ -72,11 +72,11 @@ export default function ContactModal(props: {
                             <Paper elevation={2} sx={{ pb: "30px", background: "var(--accent-dark-blue-background)", color: "var(--white-text)" }} id="contact-form">
                                 <Grid container spacing={1} sx={{ px: "5%" }}>
                                     <Box sx={{ width: "100%", display: "flex", alignItems: "center" }}>
-                                        <Typography variant="h4" sx={{ mt: "2%", width: "90%", }}>
+                                        <Typography variant="h4" sx={{ mt: "2%", width: "100%", }}>
                                             Contact Me
                                         </Typography>
-                                        <Box sx={{ width: "10%", color: "var(--yellow-background)", display: "flex", justifyContent: "center", alignItems: "center" }}>
-                                            <CloseIcon onClick={handleClose} />
+                                        <Box sx={{ color: "var(--yellow-background)", display: "flex", justifyContent: "center", alignItems: "center" }}>
+                                            <CloseIcon className="modal-close" onClick={handleClose} />
                                         </Box>
                                     </Box>
                                     <TextInputField
