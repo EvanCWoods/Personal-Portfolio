@@ -12,7 +12,6 @@ const CreateBlog = () => {
 
 
     const handleChange = () => {
-        console.log()
         setTitle((((document.querySelector(".blog-title-input") as HTMLElement).childNodes[1] as HTMLInputElement).childNodes[0] as HTMLInputElement).value);
         setSubtitle((((document.querySelector(".blog-subtitle-input") as HTMLElement).childNodes[1] as HTMLInputElement).childNodes[0] as HTMLInputElement).value);
         setBody((((document.querySelector(".blog-body-input") as HTMLElement).childNodes[1] as HTMLInputElement).childNodes[0] as HTMLInputElement).value);
