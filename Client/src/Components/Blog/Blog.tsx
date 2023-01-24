@@ -4,6 +4,7 @@ import { Box } from "@mui/system";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import React, { useState, useEffect } from "react";
 import TextInputField from "../Landing/Components/Work/Components/TextInputField";
+import Header from "../Header/Header";
 
 const Blog = () => {
     const [posts, setPosts] = useState<any[]>();
@@ -35,7 +36,6 @@ const Blog = () => {
             body: JSON.stringify({ filter: filter })
         })
         const data = await response.json();
-        console.log(data);
         //update posts state to be filtered posts
         setPosts(data);
     }
@@ -43,12 +43,14 @@ const Blog = () => {
 
     return (
         <Box sx={{}}>
-            <TextField
-                className="search-for-blogs"
-                label="Search For Blogs"
-                sx={{ width: "400px", position: "fixed", left: "calc(100% - 400px)", border: "none" }}
-                onChange={handleChange}
-            />
+            <Header>
+                <TextField
+                    className="search-for-blogs"
+                    label="Search For Blogs"
+                    sx={{ width: "400px", position: "fixed", left: "calc(100% - 400px)", border: "none" }}
+                    onChange={handleChange}
+                />
+            </Header>
             {posts
                 ? <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "space-evenly", py: "7%" }}>
                     {posts!.map(post => (

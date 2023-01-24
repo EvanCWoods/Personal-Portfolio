@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const secret = process.env.SECRET_CHAR;
-const expiration = '30m';
+const expiration = '2h';
 
 module.exports = {
     authMiddleware: function ({ req }) {

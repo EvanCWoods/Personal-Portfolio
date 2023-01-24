@@ -26,6 +26,9 @@ body {
 button:hover {
   cursor: pointer;
 }
+.hover:hover {
+  cursor: pointer;
+}
 
 .MuiOutlinedInput-root {
   background-color: white;
