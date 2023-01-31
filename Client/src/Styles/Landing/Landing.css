@@ -89,7 +89,7 @@
   justify-content: center;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 899px) {
   .tech-large {
     display: none
   }
@@ -98,7 +98,7 @@
   }
 }
 
-@media (min-width: 650px) {
+@media (min-width: 900px) {
   .tech-small {
     display: none;
   }

@@ -10,7 +10,7 @@ const Header = ({ children }: any) => {
 
     return (
         <Grid container sx={{ color: "var(--white-text)" }}>
-            <Grid item xs={1} sx={{ display: "flex", justifyContent: "center", py: 1 }}>
+            <Grid item xs={1} sx={{ py: 1, px: 0 }}>
                 <HomeIcon sx={{ fontSize: "2.5rem" }} onClick={handleClick} className="hover" />
             </Grid>
             {children

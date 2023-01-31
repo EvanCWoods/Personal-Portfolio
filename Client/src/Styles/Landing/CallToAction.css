@@ -58,3 +58,24 @@
   border-radius: 1.5px;
   background: var(--yellow-background);
 }
+
+@media (max-width: 850px) {
+  .landing-small {
+    display: block;
+  }
+}
+@media (min-width: 851px) {
+  .landing-small {
+    display: none;
+  }
+}
+@media (min-width: 851px) {
+  .landing-large {
+    display: block;
+  }
+}
+@media (max-width: 850px) {
+  .landing-large {
+    display: none;
+  }
+}

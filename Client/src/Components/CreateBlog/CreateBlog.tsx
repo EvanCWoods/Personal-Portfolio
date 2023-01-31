@@ -1,6 +1,7 @@
 import { TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState } from "react";
+var parse = require('html-react-parser');
 
 const CreateBlog = () => {
     const [title, setTitle] = useState("");
@@ -90,10 +91,10 @@ const CreateBlog = () => {
                     <Box sx={{ background: "var(--grey-background)", color: "var(--white-text)", pb: "70px" }}>
                         <img src={thumbnail} alt={thumbnailAlt} style={{ width: "90%", margin: "5%", maxWidth: "900px", maxHeight: "500px" }} />
                         <Box sx={{ margin: "0 5%", maxWidth: "900px" }}>
-                            <Typography variant="h4">{title}</Typography>
-                            <Typography variant="subtitle1">{subtitle}</Typography>
+                            <Typography variant="h4">{parse(title)}</Typography>
+                            <Typography variant="subtitle1">{parse(subtitle)}</Typography>
                             <br></br>
-                            <Box>{body}</Box>
+                            <Box>{parse(body)}</Box>
                         </Box>
                     </Box>
                 </Box>
