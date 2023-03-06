@@ -65,8 +65,8 @@ export default function CallToAction() {
                   <Grid item xs={12} md={6} sx={{ p: "5%", display: "flex", justifyContent: "center", alignItems: "center" }}>
                     <Box className="white-glassmorphism" sx={{ width: "400px", p: 2, color: "var(--white-text)" }}>
                       <Typography variant="h5" sx={{ color: "var(--yellow-background)", pb: 1.5 }}>Mission Statement</Typography>
-                      <Typography variant="body1">My goal is to modernise businesses with modern web, cloud and management technologies</Typography>
-                      <Typography variant="body1" sx={{ pt: 1 }}>I get great satisfaction from seeing a smile on the faces of those I help. Let's make yours next.</Typography>
+                      <Typography variant="body1">Unlock Your Business' Potential With The Cutting Edge In Technology.</Typography>
+                      <Typography variant="body1" sx={{ pt: 1 }}>I Get Great Satisfaction From Seeing A Smile On The Faces Of Those I Help. Let's Make Yours Next.</Typography>
                     </Box>
                   </Grid>
                 </Grid>
@@ -79,8 +79,8 @@ export default function CallToAction() {
                   <Grid item xs={12} md={6} sx={{ p: "5%", display: "flex", justifyContent: "center", alignItems: "center" }}>
                     <Box className="white-glassmorphism" sx={{ width: "400px", p: 2, color: "var(--white-text)" }}>
                       <Typography variant="h5" sx={{ color: "var(--yellow-background)", pb: 1.5 }}>Mission Statement</Typography>
-                      <Typography variant="body1">My goal is to modernise businesses with modern web, cloud and management technologies</Typography>
-                      <Typography variant="body1" sx={{ pt: 1 }}>I get great satisfaction from seeing a smile on the faces of those I help. Let's make yours next.</Typography>
+                      <Typography variant="body1">Unlock Your Business' Potential With The Cutting Edge In Technology.</Typography>
+                      <Typography variant="body1" sx={{ pt: 1 }}>I Get Great Satisfaction From Seeing A Smile On The Faces Of Those I Help. Let's Make Yours Next.</Typography>
                     </Box>
                   </Grid>
                 </Grid>

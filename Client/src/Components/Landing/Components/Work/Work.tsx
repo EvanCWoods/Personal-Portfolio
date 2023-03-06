@@ -6,8 +6,13 @@ export default function Work() {
   return (
     <Box className="mobile-work" sx={{ display: "flex", justifyContent: "space-evenly", flexWrap: "wrap" }}>
       <WorkPortal
-        title="Web Development"
-        content="I am a full stack dev (MERN &amp; ASP.NET) who is driven to bring businesses the power of modern technologies!"
+        title="Personal Projects"
+        content="See The Things I Spend My Spare Time Working On, Across Web Development And Machine Learning!"
+        toUrl="/projects/web-development"
+      />
+      <WorkPortal
+        title="Professional Experience"
+        content="See What I Have Done For Others, Both At A Fortune 500 Company, Insight, And MY Software Agency, Block Software."
         toUrl="/projects/web-development"
       />
       <WorkPortal

@@ -15,7 +15,7 @@ export default function WorkPortal(props: WorkPortalProps) {
       <Typography sx={{ textAlign: "center", mb: "3%" }}>{props.content}</Typography>
       <Box>
         <Link className="link-tag" to={props.toUrl}
-          style={{ margin: "0 0 5% 5%", display: "flex", alignItems: "center" }}>
+          style={{ margin: "10% 0 5% 5%", display: "flex", alignItems: "center" }}>
           Learn More
           <KeyboardArrowRightIcon />
         </Link>
