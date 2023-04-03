@@ -37,6 +37,8 @@ const CreateBlog = () => {
             headers: { "content-type": "application/json" },
             body: JSON.stringify(obj)
         });
+        const data = await response;
+        console.log(data);
     }
 
     return (
