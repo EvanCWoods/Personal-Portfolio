@@ -2,8 +2,7 @@ import { Link } from "react-router-dom";
 import { TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import React, { useState, useEffect } from "react";
-import TextInputField from "../Landing/Components/Work/Components/TextInputField";
+import { useState, useEffect } from "react";
 import Header from "../Header/Header";
 
 const Blog = () => {

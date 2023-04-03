@@ -1,22 +1,9 @@
-import { Grid, Divider, Typography, Paper, Button, Modal, Box } from "@mui/material";
+import { Grid, Divider, Typography, Paper, Modal, Box } from "@mui/material";
 import { Formik, Form } from "formik";
-import { useState } from "react";
 import * as Yup from "yup";
 import TextInputField from "./Contact/Components/TextInputField";
 import CloseIcon from '@mui/icons-material/Close';
 
-
-const style = {
-    position: "absolute",
-    top: "20%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    width: 800,
-    height: 100,
-    bgcolor: "background.paper",
-    boxShadow: 24,
-    borderRadius: "30px",
-};
 
 const validationSchema = Yup.object().shape({
     FirstName: Yup.string().required("Required"),

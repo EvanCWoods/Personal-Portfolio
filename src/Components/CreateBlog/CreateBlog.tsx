@@ -1,6 +1,6 @@
 import { TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import React, { useState } from "react";
+import { useState } from "react";
 var parse = require('html-react-parser');
 
 const CreateBlog = () => {

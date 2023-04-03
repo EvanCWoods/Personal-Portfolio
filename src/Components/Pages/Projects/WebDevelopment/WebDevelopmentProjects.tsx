@@ -3,7 +3,7 @@ import "../../../../Styles/Projects/Projects.css";
 import Cognizance from "../../../../Assets/ProjectImages/Cognizance.png";
 import ArtJacent from "../../../../Assets/ProjectImages/ArtJacent.png";
 import JATE from "../../../../Assets/ProjectImages/JATE.png";
-import Header from "../../../Header/Header";
+
 export default function WebDevelopmentProjects() {
   return (
     <div className="web-development projects">

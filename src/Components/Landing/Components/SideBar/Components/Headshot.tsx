@@ -1,6 +1,5 @@
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import HeadshotImage from "../../../../../Assets/IMG_7487 2.jpg";
 import Headhsot from "../../../../../Assets/Headshot.PNG";
 
 export default function HeadShot() {
