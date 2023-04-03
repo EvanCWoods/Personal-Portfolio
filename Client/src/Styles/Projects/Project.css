@@ -25,6 +25,7 @@
 }
 .project-image {
   width: 100%;
+  object-fit: scale-down; 
 }
 .external-link-container {
   margin-top: 10%;

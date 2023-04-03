@@ -8,12 +8,12 @@ export default function Work() {
       <WorkPortal
         title="Personal Projects"
         content="See The Things I Spend My Spare Time Working On, Across Web Development And Machine Learning!"
-        toUrl="/projects/web-development"
+        toUrl="/personal-projects"
       />
       <WorkPortal
         title="Professional Experience"
         content="See What I Have Done For Others, Both At A Fortune 500 Company, Insight, And MY Software Agency, Block Software."
-        toUrl="/projects/web-development"
+        toUrl="/professional-projects"
       />
       <WorkPortal
         title="Tech Blog"

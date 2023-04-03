@@ -8,13 +8,13 @@ export default function Project(props: ProjectProps) {
       <Box className="image-container">
         <img className="project-image" src={props.image} alt="some project" />
       </Box>
-      <Typography variant="h1">{props.title}</Typography>
+      <Typography variant="h1" sx={{textAlign: "center"}}>{props.title}</Typography>
       <Typography variant="body1">
         {props.description}
       </Typography>
       <Box className="external-link-container">
         {props.websiteLink ? <a href={props.websiteLink}>See The Site!</a> : null}
-        <a href={props.codeLink}>See The Code!</a>
+        {props.codeLink ? <a href={props.codeLink}>See The Code!</a> : null}
       </Box>
     </Box>
   );
