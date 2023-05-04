@@ -81,28 +81,28 @@ app.post("/inquire", async (req, res) => {
     const transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-          user: process.env.email,
-          pass: process.env.password,
+            user: process.env.email,
+            pass: process.env.password,
         },
-      });
-    
-    
-      const mailOptions = {
+    });
+
+
+    const mailOptions = {
         from: "evan.woods.dev@gmail.com",
         to: "evan.woods.dev@gmail.com",
         subject: `Enquiry from ${req.body.FirstName} ${req.body.LastName}`,
         text: `${req.body.Message} \n\n Phone: ${req.body.Phone}`,
-      };
-    
-    
-      const response = await transporter.sendMail(mailOptions, (err, info) => {
+    };
+
+
+    const response = await transporter.sendMail(mailOptions, (err, info) => {
         if (err) {
-          res.send(err);
+            res.send(err);
         } else {
-          console.log(`Email sent! ${info.response}`);
-          res.send("Success");
+            console.log(`Email sent! ${info.response}`);
+            res.send("Success");
         }
-      });
+    });
 });
 
 app.post("/login", async (req, res) => {
@@ -153,10 +153,10 @@ app.get("/posts", async (req, res) => {
 app.post("/posts", async (req, res) => {
     function onlyUnique(value, index, self) {
         return self.indexOf(value) === index;
-      }
+    }
 
     try {
-        const filteredResponse =  [];
+        const filteredResponse = [];
         const sqlQuery = `SELECT * FROM c`;
         const data = await containers.Posts.items.query(sqlQuery).fetchAll();
         data.resources.filter((post) => post.tags.find(tag => {

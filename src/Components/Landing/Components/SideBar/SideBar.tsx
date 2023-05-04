@@ -6,11 +6,6 @@ import Technologies from "./Components/Technologies";
 
 export default function SideBar() {
   return (
-    // <div className="side-bar">
-    //   <Headshot />
-    //   <Location />
-    //   <Technologies />
-    // </div>
     <Box sx={{ height: "100%" }}>
       <Headshot />
       <Location />

@@ -39,7 +39,10 @@
 
 @media (max-width: 650px) {
   .mobile-work {
-    margin-top: 20%;
+    margin-top: 150px;
+  }
+  .mobile-card {
+    width: 300px;
   }
 }
 
